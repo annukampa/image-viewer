@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Login from '../screens/login/login';
+import Profile from '../screens/profile/profile';
+import Home from '../screens/home/home';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
 class Controller extends Component {
