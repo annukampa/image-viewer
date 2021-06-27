@@ -6,7 +6,7 @@ import Input from '@material-ui/core/Input';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { Card, CardContent, Typography } from '@material-ui/core';
 import './login.css';
-import Header from '../../common/header/Header';
+import Header from '../../common/header/header';
 import { Redirect } from 'react-router-dom';
 
 

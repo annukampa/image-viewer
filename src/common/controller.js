@@ -18,6 +18,7 @@ class Controller extends Component {
                 <Router>
                     <Switch>
                         <Route exact path="/" render={({ history }, props) => <Login {...props} baseUrl={this.baseUrl} history={history} />} />
+                        <Route exact path="/home" render={({ history }, props) => <Home {...props} baseUrl={this.baseUrl} history={history} />} />
                     </Switch>
                 </Router>
             </div>
