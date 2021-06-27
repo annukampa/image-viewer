@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Login from '../screens/login/Login';
+import Login from '../screens/login/login';
 import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 
 class Controller extends Component {
@@ -19,6 +19,7 @@ class Controller extends Component {
                     <Switch>
                         <Route exact path="/" render={({ history }, props) => <Login {...props} baseUrl={this.baseUrl} history={history} />} />
                         <Route exact path="/home" render={({ history }, props) => <Home {...props} baseUrl={this.baseUrl} history={history} />} />
+                        <Route exact path="/profile" render={({ history }, props) => <Profile {...props} baseUrl={this.baseUrl} history={history} />} />
                     </Switch>
                 </Router>
             </div>
