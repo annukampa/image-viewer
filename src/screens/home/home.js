@@ -26,7 +26,7 @@ class Home extends Component {
             userImages: [],
             filteredImages: [],
             id: "201548275214708",
-            url: "https://scontent.cdninstagram.com/v/t51.29350-15/201632985_2925903117736581_3526366745971372327_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=xu99gAKRjz8AX_Dfecr&_nc_oc=AQlU1FszT-_ed27zJSqmpXN1ZJdoWLvn1EAoAO-t9a4aqMLj5wkWrKTh7KZpo4hPvsc&_nc_ht=scontent.cdninstagram.com&oh=c40633975cc23b5ec7550ebd54020d94&oe=60DBFFEA",
+            url: "https://instagram.fdel11-2.fna.fbcdn.net/v/t51.2885-19/s320x320/102358546_929842287438655_4513207811348444146_n.jpg?tp=1&_nc_ht=instagram.fdel11-2.fna.fbcdn.net&_nc_ohc=Q6Hnbo3MSYsAX_Xike0&edm=ABfd0MgBAAAA&ccb=7-4&oh=b9bae51076299a1e284e7ecae92e70d8&oe=60DFDB54&_nc_sid=7bff83",
             username: "shedigsinlife",
             loggedIn: sessionStorage.getItem("access-token") == null ? false : true
         }
