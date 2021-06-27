@@ -54,7 +54,7 @@ class Home extends Component {
         }
         this.setState({ userImages: posts });
         this.setState({ filteredImages: posts.filter(x => true) });  // Filtering images for search query.
-        console.log(this.state.userImages);
+
     }
 
 
