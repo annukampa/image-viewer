@@ -25,9 +25,9 @@ class Home extends Component {
             searchText: "",
             userImages: [],
             filteredImages: [],
-            id: "201548275214708",
-            url: "https://instagram.fdel11-2.fna.fbcdn.net/v/t51.2885-19/s320x320/102358546_929842287438655_4513207811348444146_n.jpg?tp=1&_nc_ht=instagram.fdel11-2.fna.fbcdn.net&_nc_ohc=Q6Hnbo3MSYsAX_Xike0&edm=ABfd0MgBAAAA&ccb=7-4&oh=b9bae51076299a1e284e7ecae92e70d8&oe=60DFDB54&_nc_sid=7bff83",
-            username: "shedigsinlife",
+            id: "1468939696790396",
+            url: "https://instagram.fagr1-1.fna.fbcdn.net/v/t51.2885-19/s320x320/208984730_322198709558297_7576154139968612426_n.jpg?tp=1&_nc_ht=instagram.fagr1-1.fna.fbcdn.net&_nc_ohc=zI-v0JKaoQYAX9RgZ0J&edm=ABfd0MgBAAAA&ccb=7-4&oh=6047d905e5732628eee5f004627219dd&oe=60E0106E&_nc_sid=7bff83",
+            username: "devtestingaccount",
             loggedIn: sessionStorage.getItem("access-token") == null ? false : true
         }
     }
@@ -39,21 +39,23 @@ class Home extends Component {
         let response = await fetch(getUserImages);
         let posts = await response.json();
         posts = posts.data;
-
-        for (let i = 0; i < posts.length; i++) {
-            response = await fetch(getPostDetails.replace('$postId', posts[i].id));
-            let details = await response.json();
-            posts[i].index = i;
-            posts[i].url = details.media_url;
-            posts[i].username = details.username;
-            posts[i].timestamp = details.timestamp;
-            posts[i].comments = []; // For adding new comments.
-            posts[i].tags = "#upgrad #upgradproject #reactjs";
-            posts[i].likes = Math.round(Math.random() * 100);
-            posts[i].isLiked = false; // Setting liked status for the current user.
+        if (posts && posts.length > 0) {
+            for (let i = 0; i < posts.length; i++) {
+                response = await fetch(getPostDetails.replace('$postId', posts[i].id));
+                let details = await response.json();
+                posts[i].index = i;
+                posts[i].url = details.media_url;
+                posts[i].username = details.username;
+                posts[i].timestamp = details.timestamp;
+                posts[i].comments = []; // For adding new comments.
+                posts[i].tags = "#upgrad #upgradproject #reactjs";
+                posts[i].likes = Math.round(Math.random() * 100);
+                posts[i].isLiked = false; // Setting liked status for the current user.
+            }
+            this.setState({ userImages: posts });
+            this.setState({ filteredImages: posts.filter(x => true) });  // Filtering images for search query.
+            console.log(this.state.userImages);
         }
-        this.setState({ userImages: posts });
-        this.setState({ filteredImages: posts.filter(x => true) });  // Filtering images for search query.
 
     }
 

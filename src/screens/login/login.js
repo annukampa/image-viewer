@@ -40,7 +40,7 @@ class Login extends Component {
     loginClickedHandler = () => {
         let mockUsername = "admin";
         let mockPassword = "admin";
-        let accessToken = "IGQVJWOXNLbVB5RERkQUhIRHdQTWFQVHV3SS1manFFZA1pFWEhTbm5QQkVUODhodmZACWDlqRDAxTEVqRjhJaVV2dzljWDV4WWZAQWlpZAZAzFzYUphemdSZAXZAhNDMzWUNRM0pSVVh3bTh4ZAWRYZAWJTNjIwSAZDZD";
+        let accessToken = "IGQVJVSWRmVWNwQnYwbHZA6NTE5T1NyeXVxRFg1VjFjX0UyVVVNbFpnN08wWWtmblVaRGpqcFIxcjBfZAXJCbVRjTWpYbGFDMjl0dEpWLU9sOU5qV0hIbDhxWEs4c2Y3N0Foamg1cEdJQlluSVV4UC1SZAAZDZD";
 
         this.state.username === "" ? this.setState({ usernameRequiredLabel: "red" }) : this.setState({ usernameRequiredLabel: "hide" });
         this.state.password === "" ? this.setState({ passwordRequiredLabel: "red" }) : this.setState({ passwordRequiredLabel: "hide" });
